@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            background: linear-gradient(135deg, #B76E79, #FFB6C1);
+            color: white;
+        }
+        .box {
+            background: white;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 200px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>✅ Test Page - Server is Working!</h1>
+
+    <div class="box">
+        <h2>If you see this, the server is working correctly!</h2>
+        <p>Let's test if the photos load:</p>
+        <img src="images/photos/photo-1.jpg" alt="Test Photo 1">
+        <img src="images/photos/photo-2.jpg" alt="Test Photo 2">
+        <img src="images/photos/photo-3.jpg" alt="Test Photo 3">
+    </div>
+
+    <div class="box">
+        <h2>Now let's test JavaScript:</h2>
+        <p id="js-test">JavaScript is NOT working...</p>
+    </div>
+
+    <script>
+        document.getElementById('js-test').textContent = '✅ JavaScript IS working!';
+        document.getElementById('js-test').style.color = 'green';
+        document.getElementById('js-test').style.fontWeight = 'bold';
+        console.log('✅ JavaScript loaded successfully!');
+    </script>
+
+    <div class="box">
+        <h2>Next step:</h2>
+        <p>If this page works, go back to: <a href="/">Main Site (index.html)</a></p>
+        <p>If the main site is white, open your browser's Developer Tools (F12) and check the Console tab for errors.</p>
+    </div>
+</body>
+</html>

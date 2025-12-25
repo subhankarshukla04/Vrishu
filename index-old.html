@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Our Story - A celebration of our journey together">
+    <title>Our Story ❤️</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- PhotoSwipe CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/photoswipe/dist/photoswipe.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+    <!-- Password Protection Overlay (DISABLED - remove 'hidden' class to enable) -->
+    <div id="password-overlay" class="password-overlay hidden">
+        <div class="password-container">
+            <h1>Welcome to Our Story</h1>
+            <p>Please enter the password to continue</p>
+            <input type="password" id="password-input" placeholder="Enter password">
+            <button id="password-submit">Enter</button>
+            <p id="password-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content">
+
+        <!-- Fixed Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">Our Story ❤️</div>
+                <ul class="nav-menu">
+                    <li><a href="#hero" class="nav-link active">Home</a></li>
+                    <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#message" class="nav-link">Message</a></li>
+                </ul>
+                <button id="nav-music-toggle" class="nav-music-btn" aria-label="Play/Pause Music">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- Hero Section with Slideshow -->
+        <section id="hero">
+            <div class="swiper hero-swiper">
+                <div class="swiper-wrapper" id="slideshow-container">
+                    <!-- Photos will be loaded dynamically -->
+                </div>
+                <div class="swiper-pagination"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1 class="hero-title">Our Story</h1>
+                    <p class="hero-subtitle">Three Months of Magic</p>
+                    <button class="explore-button" onclick="document.getElementById('timeline').scrollIntoView({behavior: 'smooth'})">
+                        Explore Our Journey
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="white" style="margin-left: 8px;">
+                            <path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator">
+                <div class="scroll-arrow">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M7 10l5 5 5-5z"/>
+                    </svg>
+                </div>
+                <span class="scroll-text">Scroll to explore</span>
+            </div>
+
+            <!-- Music Player -->
+            <div class="music-player">
+                <button id="music-toggle" class="music-button" aria-label="Play/Pause Music">
+                    <svg id="play-icon" width="24" height="24" viewBox="0 0 24 24" fill="white">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg id="pause-icon" width="24" height="24" viewBox="0 0 24 24" fill="white" style="display:none;">
+                        <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                </button>
+                <audio id="background-music" loop>
+                    <source src="audio/our-song.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+        </section>
+
+        <!-- Timeline Section -->
+        <section id="timeline">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Journey Together</h2>
+                <div id="timeline-container" class="timeline-container">
+                    <!-- Timeline events will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Photo Gallery Section -->
+        <section id="gallery">
+            <div class="container">
+                <h2 class="section-title" data-aos="fade-up">Our Memories</h2>
+                <div id="gallery-grid" class="gallery-grid">
+                    <!-- Gallery photos will be loaded dynamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Heartfelt Message Section -->
+        <section id="message">
+            <div class="message-overlay">
+                <div class="message-content" data-aos="fade-up" data-aos-duration="1000">
+                    <h2 class="message-title">Why You Mean Everything to Me</h2>
+                    <div class="heartfelt-text">
+                        <p>These past three months with you have been the most incredible journey of my life. From the moment we met on August 26th, I knew there was something special about you.</p>
+                        <p>Every day with you brings new joy, laughter, and love that I never knew was possible. You've changed my life in ways I can't even put into words.</p>
+                        <p>Thank you for being you, for being patient with me, for making me laugh, and for choosing to spend your time with me. I can't wait to create many more memories together.</p>
+                        <p>Happy Birthday, my love. Here's to us, and to all the adventures yet to come. ❤️</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>Made with ❤️ for the most amazing person in the world</p>
+                <p class="footer-date">December 2025</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Love Letter Modal -->
+    <div id="love-letter-modal" class="love-letter-modal">
+        <div class="love-letter-content">
+            <button class="love-letter-close">&times;</button>
+            <div class="love-letter-text"></div>
+        </div>
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/photoswipe/dist/photoswipe.umd.min.js"></script>
+    <script src="https://unpkg.com/photoswipe/dist/photoswipe-lightbox.umd.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="data/timeline-data.js"></script>
+    <script src="data/letters-data.js"></script>
+    <script src="js/password.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/slideshow.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/love-letters.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
